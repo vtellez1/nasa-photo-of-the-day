@@ -5,7 +5,12 @@ const nasaCard = props => {
       <div className="nasa-card">
         <h1>{props.title}</h1>
         <h4>{props.date}</h4>
-        <img className="nasa-image" alt="random space" src={props.imgUrl}/>
+        <div className="media">
+          {props.media === "video" ? (
+            <iframe title ="spacevideo" width="1080" height="720" alt="video of the day" src={props.imgUrl}/>
+          ) : (<img alt="random space" src={props.imgUrl}/>
+          )}
+        </div>
         <p>{props.explanation}</p>
       </div>
     );

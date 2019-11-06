@@ -7,7 +7,7 @@ import axios from "axios";
 
     useEffect(() => {
         axios
-        .get("https://api.nasa.gov/planetary/apod?api_key=NGEx7XwPsCQU8uwuzQLcOwEG2FH19c4k42XGp1lg")
+        .get(`https://api.nasa.gov/planetary/apod?api_key=NGEx7XwPsCQU8uwuzQLcOwEG2FH19c4k42XGp1lg&date=2019-10-01`)
         .then(response => {
             console.log(response.data);
             setNasa(response.data)
@@ -19,10 +19,11 @@ import axios from "axios";
 
   return  <div className="container">
   { <NasaCard 
-  imgUrl={spacePic.hdurl} 
+  imgUrl={spacePic.url} 
   title={spacePic.title} 
   explanation={spacePic.explanation} 
-  date={spacePic.date}/>} 
+  date={spacePic.date}
+  media={spacePic.media_type}/>} 
 </div>
   };
 export default NasaInfo;
