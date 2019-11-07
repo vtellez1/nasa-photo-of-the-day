@@ -7,7 +7,7 @@ import axios from "axios";
 
     useEffect(() => {
         axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=NGEx7XwPsCQU8uwuzQLcOwEG2FH19c4k42XGp1lg&date=2019-10-01`)
+        .get(`https://api.nasa.gov/planetary/apod?api_key=NGEx7XwPsCQU8uwuzQLcOwEG2FH19c4k42XGp1lg`)
         .then(response => {
             console.log(response.data);
             setNasa(response.data)
