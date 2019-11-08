@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NasaCard from "./NasaCard";
 import axios from "axios";
+import Description from "./Description";
 
  const NasaInfo = () => {
     const [spacePic, setNasa] = useState([]);
@@ -24,6 +25,8 @@ import axios from "axios";
   explanation={spacePic.explanation} 
   date={spacePic.date}
   media={spacePic.media_type}/>} 
+  {<Description
+explanation={spacePic.explanation}/>}
 </div>
   };
 export default NasaInfo;
